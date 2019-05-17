@@ -3,6 +3,6 @@ import java.awt.*;
 
 public class Main extends Applet {
     public void paint(Graphics g){
-        Expo.fillRectangle(g,1,1,154,15);
+        Expo.drawHeading(g,"Quentin Snow and Alekkai","Final Project");
     }
 }
