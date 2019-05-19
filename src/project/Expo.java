@@ -1,4 +1,4 @@
-// THE EXPO CLASS FOR INTRO/CP COMPUTER SCIENCE
+package project;// THE EXPO CLASS FOR INTRO/CP COMPUTER SCIENCE
 
 // NOTE: HTML <br> (breaks) are used in the documentation so it will look better in Javadoc.
 
@@ -12,20 +12,20 @@ import java.applet.Applet;
  *
  * EXPO CLASS UPDATE: 11/14/2016 <BR><BR>
  *
- * The concept and implementation of the original set of Expo class methods was created by John L. M. Schram
- * (the Son), who is called John Schram.  The Expo class was created to teach programming skills to students
- * in introductory computer science courses. Use of the Expo class eliminates many program steps that are
+ * The concept and implementation of the original set of project.Expo class methods was created by John L. M. Schram
+ * (the Son), who is called John Schram.  The project.Expo class was created to teach programming skills to students
+ * in introductory computer science courses. Use of the project.Expo class eliminates many program steps that are
  * tedious and frustrating for beginning students. Program input is simplified and graphics commands are
  * more intuitive. Many additional graphics commands are added to allow for interesting displays with minimal effort.
  *
- * The Expo class is a work in progress and you can expect the Schrams to add/remove methods from time to time.
+ * The project.Expo class is a work in progress and you can expect the Schrams to add/remove methods from time to time.
  * The version date will indicate if you have the latest update.
  *
  * This version of the EXPO class is meant for "Regular" or "CP" Computer Science.
- * In addition to all of the methods from the Pre-APCS version of the Expo class,
+ * In addition to all of the methods from the Pre-APCS version of the project.Expo class,
  * this version also includes methods drawString, setFont, drawPolygon and fillPolygon.
  *
- * Since the creation of the initial bulk of the Expo class, John L. A. Schram (the father), who is called
+ * Since the creation of the initial bulk of the project.Expo class, John L. A. Schram (the father), who is called
  * Leon Schram, has added some additional methods.  Both John Schram and Leon Schram are computer science
  * teachers at John Paul II High School in Plano, Texas.
  *
@@ -34,7 +34,7 @@ import java.applet.Applet;
  * hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
  * or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
  *
- * 36 constant colors are built into the Expo class
+ * 36 constant colors are built into the project.Expo class
  * The 7 primary colors are red, green, blue, orange, yellow, tan and gray.
  * Each of these colors also has a "dark" shade and a "light" shade.
  * For example, the 3 shades of red are: red, lightRed and darkRed.
@@ -131,7 +131,7 @@ public class Expo
      * Returns a "true" random integer in the [min..max] range, inclusive. <BR>
      * Precondition: max > min <br>
      * Example:<br>
-     * System.out.println(Expo.random(100,200)); <br>
+     * System.out.println(project.Expo.random(100,200)); <br>
      * This will display a random integer between 100 and 200.
      **/
     public static int random(int min, int max)
@@ -156,7 +156,7 @@ public class Expo
     /**
      * Pauses the output and waits for the user to press the [enter] key. <br>
      * Example: <br>
-     * Expo.pause();
+     * project.Expo.pause();
      **/
     public static void pause()
     {
@@ -170,12 +170,12 @@ public class Expo
     /**
      * Pauses the output for a specified number of milliseconds (1/1000ths of a second). <br>
      * Examples:<br>
-     * Expo.delay(1000); // pause for 1 second <br>
-     * Expo.delay(2000); // pause for 2 seconds <br>
-     * Expo.delay(500);  // pause for 1/2 of a second <br>
-     * Expo.delay(100);  // pause for 1/10 of a second <br>
-     * Expo.delay(10);   // pause for 1/100 of a second <br>
-     * Expo.delay(1);    // pause for 1/1000 of a second <br>
+     * project.Expo.delay(1000); // pause for 1 second <br>
+     * project.Expo.delay(2000); // pause for 2 seconds <br>
+     * project.Expo.delay(500);  // pause for 1/2 of a second <br>
+     * project.Expo.delay(100);  // pause for 1/10 of a second <br>
+     * project.Expo.delay(10);   // pause for 1/100 of a second <br>
+     * project.Expo.delay(1);    // pause for 1/1000 of a second <br>
      **/
     public static void delay(int n)
     {
@@ -198,7 +198,7 @@ public class Expo
      * Allows input of an int (integer) from the keyboard in a text window. <br>
      * Example: <br>
      * System.out.print("How old are you?  -->  "); <br>
-     * int age = Expo.enterInt();
+     * int age = project.Expo.enterInt();
      **/
     public static int enterInt()
     {
@@ -212,7 +212,7 @@ public class Expo
      * Allows input of a double (real number) from the keyboard in a text window. <br>
      * Example: <br>
      * System.out.print("What is your current GPA?  {0.00 - 4.00}  -->  "); <br>
-     * double gpa = Expo.enterDouble();
+     * double gpa = project.Expo.enterDouble();
      **/
     public static double enterDouble()
     {
@@ -226,7 +226,7 @@ public class Expo
      * Allows input of a String from the keyboard in a text window. <br>
      * Example: <br>
      * System.out.print("What is your name?  --->  "); <br>
-     * String name = Expo.enterString();
+     * String name = project.Expo.enterString();
      **/
     public static String enterString()
     {
@@ -240,7 +240,7 @@ public class Expo
      * Allows input of a char from the keyboard in a text window. <br>
      * Example: <br>
      * System.out.print("What is your middle initial?  -->  "); <br>
-     * char middleInitial = Expo.enterChar();
+     * char middleInitial = project.Expo.enterChar();
      **/
     public static char enterChar()
     {
@@ -262,9 +262,9 @@ public class Expo
     /**
      * Allows the user to change the color, using a Color object parameter. <BR>
      * Example:
-     * Expo.setColor(g,Expo.red);
+     * project.Expo.setColor(g,project.Expo.red);
      * Changes the current drawing  color to red.
-     * 36 colors constants are built into the Expo class.  These colors are listed near the top of this file.
+     * 36 colors constants are built into the project.Expo class.  These colors are listed near the top of this file.
      **/
     public static void setColor(Graphics g, Color newColor)
     {
@@ -288,7 +288,7 @@ public class Expo
      * 9 = pink <br>
      * Any negative number will give you white. <br><br>
      * Example: <br>
-     * Expo.setColor(g,1); <br>
+     * project.Expo.setColor(g,1); <br>
      * Changes the current drawing color to red.
      **/
     public static void setColor(Graphics g, int colorNum)
@@ -316,7 +316,7 @@ public class Expo
      * This allows for more than 16 million different color combinations. <br>
      * Precondition: All 3 color values need to be between 0 and 255 inclusive. <br>
      * Example: <br>
-     * Expo.setColor(g,190,10,47); <br>
+     * project.Expo.setColor(g,190,10,47); <br>
      * Changes the current drawing color to the shade of red used in the official Texas Flag
      **/
     public static void setColor(Graphics g, int red, int green, int blue)
@@ -335,7 +335,7 @@ public class Expo
      * Small alpha values are more transparent.  Large alpha values are more opaque. <BR>
      * Precondition: All 4 int values need to be between 0 and 255 inclusive. <br>
      * Example: <br>
-     * Expo.setColor(g,190,10,47,128); <br>
+     * project.Expo.setColor(g,190,10,47,128); <br>
      * Changes the current drawing color to the shade of red used in the official Texas Flag
      * and makes it semi-transparent
      **/
@@ -350,7 +350,7 @@ public class Expo
     /**
      * Sets the current color to a random color value which can be any of the 16,000,000+ possible colors. <br>
      * Example: <br>
-     * Expo.setRandomColor(g);
+     * project.Expo.setRandomColor(g);
      **/
     public static void setRandomColor(Graphics g)
     {
@@ -368,9 +368,9 @@ public class Expo
      * Precondition: The applet window cannot be greater than 4800 X 3600 in size. <br>
      * Postcondition: The current drawing color will not be affected by the background color. <br>
      * Example: <br>
-     * Expo.setBackground(g,Expo.red);
+     * project.Expo.setBackground(g,project.Expo.red);
      * This will make the entire background red.
-     * 36 colors constants are built into the Expo class.  These colors are listed near the top of this file.
+     * 36 colors constants are built into the project.Expo class.  These colors are listed near the top of this file.
      **/
     public static void setBackground(Graphics g, Color bgColor)
     {
@@ -394,7 +394,7 @@ public class Expo
      * 9 = pink <br>
      * Any negative number will give you white. <br><br>
      * Example: <br>
-     * Expo.setBackground(g,1); <br>
+     * project.Expo.setBackground(g,1); <br>
      * Changes the background color to red.
      **/
     public static void setBackground(Graphics g, int colorNum)
@@ -423,7 +423,7 @@ public class Expo
      *                The applet window cannot be greater than 4800 X 3600 in size. <br>
      * Postcondition: The current drawing color will not be affected by the background color. <br>
      * Example: <br>
-     * Expo.setBackground(g,190,10,47); <br>
+     * project.Expo.setBackground(g,190,10,47); <br>
      * Changes the background color to the shade of red used in the official Texas Flag
      **/
 
@@ -446,7 +446,7 @@ public class Expo
     /**
      * Draws a single pixel at the specified x,y location. <BR>
      * Example: <BR>
-     * Expo.drawPixel(g,100,200); <BR>
+     * project.Expo.drawPixel(g,100,200); <BR>
      * Draws a very small single dot (pixel) on the computer screen 100 pixels over and 200 pixels down
      **/
     public static void drawPixel(Graphics g, int x, int y)
@@ -458,7 +458,7 @@ public class Expo
     /**
      * Draws a 3 pixel X 3 pixel "point" whose center is at the specified x,y location. <BR>
      * Example: <BR>
-     * Expo.drawPoint(g,100,200);
+     * project.Expo.drawPoint(g,100,200);
      * Draws a larger, more visible (than drawPixel) dot on the computer screen 100 pixels over and 200 pixels down.
      **/
     public static void drawPoint(Graphics g, int x, int y)
@@ -470,7 +470,7 @@ public class Expo
     /**
      * Draws the line segment connecting coordinates x1,y1 and x2,y2. <BR>
      * Example: <BR>
-     * Expo.drawLine(g,100,200,300,400); <BR>
+     * project.Expo.drawLine(g,100,200,300,400); <BR>
      * Draws a line segment connecting the starting coordinate point (100,200) with the ending point (300,400).
      **/
     public static void drawLine(Graphics g, int x1, int y1, int x2, int y2)
@@ -481,7 +481,7 @@ public class Expo
     /**
      * Draws a thicker line segment connecting coordinates x1,y1 and x2,y2. <BR>
      * Example: <BR>
-     * Expo.drawLine(g,100,200,300,400); <BR>
+     * project.Expo.drawLine(g,100,200,300,400); <BR>
      * Draws a line segment connecting the starting coordinate point (100,200) with the ending point (300,400).
      **/
     public static void drawThickLine(Graphics g, int x1, int y1, int x2, int y2)
@@ -495,7 +495,7 @@ public class Expo
      * Draws an open circle.<br>
      * The user specifies the x,y coordinate of the center of the circle as well as the radius value. <br>
      * Example: <br>
-     * Expo.drawCircle(g,300,200,100); <br>
+     * project.Expo.drawCircle(g,300,200,100); <br>
      * Draws an open circle with a radius of 100 pixels whose center is located at the coordinate (300,200).
      **/
     public static void drawCircle(Graphics g, int centerX, int centerY, int radius)
@@ -509,7 +509,7 @@ public class Expo
      * Draws an open oval.<br>
      * The user specifies the x,y coordinate of the center of the oval as well as the horizontal and vertical radii values. <br>
      * Example: <br>
-     * Expo.drawOval(g,300,200,100,50); <br>
+     * project.Expo.drawOval(g,300,200,100,50); <br>
      * Draws an open oval with a horizontal radius of 100 pixels and a vertical radius of 50 pixels. <br>
      * The center of this oval is located at the coordinate (300,200).
      **/
@@ -547,7 +547,7 @@ public class Expo
      * Draws an open rectangle.<br>
      * The upper-left-hand corner is specified by x1,y1 and the lower-right-hand corner is specified by x2, y2. <br>
      * Example: <br>
-     * Expo.drawRectangle(g,100,200,300,400); <br>
+     * project.Expo.drawRectangle(g,100,200,300,400); <br>
      * Draws an open rectangle whose upper-left-hand coordinate is (100,200) and whose lower-right-hand coordinate is (300,400).
      **/
     public static void drawRectangle(Graphics g, int x1, int y1, int x2, int y2)
@@ -568,7 +568,7 @@ public class Expo
      * The first 5 parameters (g and 4 ints) are the same as drawRect.<br>
      * The final parameter "pixels" specifies the number of pixels used in the rounded corner. <br>
      * Example: <br>
-     * Expo.drawRoundedRectangle(g,100,200,300,400,25);
+     * project.Expo.drawRoundedRectangle(g,100,200,300,400,25);
      **/
     public static void drawRoundedRectangle(Graphics g, int x1, int y1, int x2, int y2, int pixels)
     {
@@ -589,7 +589,7 @@ public class Expo
      * (It is actually the radius of the circle that the spiral would fit inside.) <BR>
      * The spacing is controlled by the "spacing" parameter.  <BR>
      * Example: <BR>
-     * Expo.drawSpiral(g,300,200,100,25); <BR>
+     * project.Expo.drawSpiral(g,300,200,100,25); <BR>
      * Draws a spiral with a maxRadius of 100 pixels whose center is located at the coordinate (300,200). <BR>
      * There are precisely 25 pixels separating each "loop" of the spiral. <BR>
      **/
@@ -615,7 +615,7 @@ public class Expo
      * The lines are evenly spaced and drawn from the center of a circle to its edge.<br>
      * The size of the circle is specified by the radius parameter. <br>
      * Example: <br>
-     * Expo.drawBurst(g,300,200,100,50); <br>
+     * project.Expo.drawBurst(g,300,200,100,50); <br>
      * Draws a "burst" with a radius of 100 pixels whose center is located at the coordinate (300,200). <br>
      * The "burst" will be comprised of 50 evenly spaced lines.
      **/
@@ -642,7 +642,7 @@ public class Expo
      * (As in the radius of the circle the regular polygon would fit inside). <br>
      * Precondition: sides >= 3 <br>
      * Example:
-     * Expo.drawRegularPolygon(g,300,200,100,8);
+     * project.Expo.drawRegularPolygon(g,300,200,100,8);
      * Draws an open regular octagon with a radius of 100 pixels whose center is located at the coordinate (300,200).
      **/
     public static void drawRegularPolygon(Graphics g, int centerX, int centerY, int radius, int sides)
@@ -673,7 +673,7 @@ public class Expo
      * (As in the radius of the circle the star would fit inside). <br>
      * Precondition: points >= 2 <br>
      * Example: <br>
-     * Expo.drawStar(g,300,200,100,8); <br>
+     * project.Expo.drawStar(g,300,200,100,8); <br>
      * Draws an open star with 8 points and a radius of 100 pixels whose center is located at the coordinate (300,200).
      **/
     public static void drawStar(Graphics g, int centerX, int centerY, int radius, int points)
@@ -715,7 +715,7 @@ public class Expo
      * Displays a heading at the top of the graphics screen. <br>
      * The user provides his/her name and the number of the lab assignment. <br>
      * Example: <br>
-     * Expo.drawHeading(g,"John Smith","6B"); <br>
+     * project.Expo.drawHeading(g,"John Smith","6B"); <br>
      * Displays "Lab 6B  By: John Smith" centered at the top of the graphics screen in big bold letters. <br>
      * A separating line will also be drawn across the graphics screen 50 pixels below the top.
      **/
@@ -744,7 +744,7 @@ public class Expo
      * Draws a solid "filled in" circle.<br>
      * The user specifies the x,y coordinate of the center of the circle as well as the radius value. <br>
      * Example: <br>
-     * Expo.fillCircle(g,300,200,100); <br>
+     * project.Expo.fillCircle(g,300,200,100); <br>
      * Draws a solid circle with a radius of 100 pixels whose center is located at the coordinate (300,200).
      **/
     public static void fillCircle(Graphics g, int centerX, int centerY, int radius)
@@ -758,7 +758,7 @@ public class Expo
      * Draws a solid "filled in" oval.<br>
      * The user specifies the x,y coordinate of the center of the oval as well as the horizontal and vertical radii values.  <br>
      * Example: <br>
-     * Expo.fillOval(g,300,200,100,50); <br>
+     * project.Expo.fillOval(g,300,200,100,50); <br>
      * Draws a solid oval with a horizontal radius of 100 pixels and a vertical radius of 50 pixels. <br>
      * The center of this oval is located at the coordinate (300,200).
      **/
@@ -796,7 +796,7 @@ public class Expo
      * Draws a solid "filled in" rectangle.<br>
      * The upper-left-hand corner is specified by x1,y1 and the lower-right-hand corner is specified by x2, y2. <br>
      * Example: <br>
-     * Expo.fillRectangle(g,100,200,300,400); <br>
+     * project.Expo.fillRectangle(g,100,200,300,400); <br>
      * Draws an open rectangle whose upper-left-hand coordinate is (100,200) and whose lower-right-hand coordinate is (300,400).
      **/
     public static void fillRectangle(Graphics g, int x1, int y1, int x2, int y2)
@@ -834,7 +834,7 @@ public class Expo
      * (As in the radius of the circle the regular polygon would fit inside). <br>
      * Precondition: sides >= 3 <br>
      * Example:
-     * Expo.fillRegularPolygon(g,300,200,100,8);
+     * project.Expo.fillRegularPolygon(g,300,200,100,8);
      * Draws a solid "filled-in" regular octagon with a radius of 100 pixels whose center is located at the coordinate (300,200).
      **/
     public static void fillRegularPolygon(Graphics g, int centerX, int centerY, int radius, int sides)
@@ -893,7 +893,7 @@ public class Expo
      * (As in the radius of the circle the star would fit inside). <br>
      * Precondition: points >= 2 <br>
      * Example: <br>
-     * Expo.fillStar(g,300,200,100,8); <br>
+     * project.Expo.fillStar(g,300,200,100,8); <br>
      * Draws a solid star with 8 points and a radius of 100 pixels whose center is located at the coordinate (300,200).
      **/
     public static void fillStar(Graphics g, int centerX, int centerY, int radius, int points)
@@ -936,7 +936,7 @@ public class Expo
 
 
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    // Methods not included in the Pre-APCS version of the Expo class:
+    // Methods not included in the Pre-APCS version of the project.Expo class:
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
@@ -944,7 +944,7 @@ public class Expo
      * Draws a String s on the graphics screen at a certain x,y coordinate. <br>
      * The coordinate x,y is the location of the bottom-left corner of the first character in the String s. <br>
      * Example: <br>
-     * Expo.drawString(g,"Hello There!",100,200);
+     * project.Expo.drawString(g,"Hello There!",100,200);
      **/
     public static void drawString(Graphics g, String s, int x, int y)
     {
@@ -955,7 +955,7 @@ public class Expo
     /**
      * Allows you to change the current "font" used by the drawString method. <br>
      * Example: <br>
-     * Expo.setFont(g,"Courier",Font.BOLD,36);
+     * project.Expo.setFont(g,"Courier",Font.BOLD,36);
      **/
     public static void setFont(Graphics g, String name, int style, int size)
     {
@@ -967,8 +967,8 @@ public class Expo
     /**
      * Draws an open irregular polygon using 3 or more sets of provided coordinates. <br>
      * Examples: <br>
-     * Expo.drawPolygon(g,100,300,200,100,300,300);                         // for a triangle
-     * Expo.drawPolygon(g,525,300,600,250,650,250,725,300,725,350,650,400); // for a hexagon
+     * project.Expo.drawPolygon(g,100,300,200,100,300,300);                         // for a triangle
+     * project.Expo.drawPolygon(g,525,300,600,250,650,250,725,300,725,350,650,400); // for a hexagon
      **/
     public static void drawPolygon(Graphics g, int... coordinate)
     {
@@ -997,8 +997,8 @@ public class Expo
     /**
      * Draws an solid "filled-in" irregular polygon using 3 or more sets of provided coordinates. <br>
      * Examples: <br>
-     * Expo.fillPolygon(g,100,300,200,100,300,300);                         // for a triangle
-     * Expo.fillPolygon(g,525,300,600,250,650,250,725,300,725,350,650,400); // for a hexagon
+     * project.Expo.fillPolygon(g,100,300,200,100,300,300);                         // for a triangle
+     * project.Expo.fillPolygon(g,525,300,600,250,650,250,725,300,725,350,650,400); // for a hexagon
      **/
     public static void fillPolygon(Graphics g, int... coordinate)
     {
