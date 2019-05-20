@@ -1,3 +1,5 @@
+// This module was created by Quentin Snow
+
 package project;
 
 import java.applet.Applet;
@@ -15,6 +17,26 @@ public class Draw extends Applet {
 
 
     }
+    public static void begin(Graphics g){
+        road(g);
+        moveTest(g);
+    }
+    public static void moveTest(Graphics g){
+        int x = 0;
+        while (true){
+            player(g,x,200);
+            Expo.delay(1);
+            x ++;
+        }
+    }
+    public static void player(Graphics g, int x, int y){
+        Expo.drawPoint(g,x,y);
+    }
+
+
+
+
+
     public static void road(Graphics g){
         Expo.fillRoundedRectangle(g,100,100,410,500,6);
         Expo.setColor(g,Colors.roadGrey);
