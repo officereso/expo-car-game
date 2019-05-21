@@ -9,15 +9,14 @@ public class Main extends Applet {
     private Rectangle startBtn = new Rectangle(100,100,340,600);
 
     public void paint(Graphics g){
+        test(g);
         Expo.drawHeading(g, "Quentin Snow and Alekkai", "Final Project");
-
         if (start){
             Draw.begin(g);
         }
         else{
             Draw.startScreen(g);
         }
-
     }
 
     public boolean mouseDown(Event e, int x, int y){
@@ -25,7 +24,12 @@ public class Main extends Applet {
             start = true;
             repaint();
         }
-
         return true;
+    }
+
+
+    public static void test(Graphics g){
+        // put testing code and calls here
+
     }
 }

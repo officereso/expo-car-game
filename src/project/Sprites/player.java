@@ -12,5 +12,7 @@ public class player extends Applet {
         Expo.setColor(g,colorsTemp.Tires);
         Expo.fillRectangle(g, 105, 108, 90, 128);
         Expo.fillRectangle(g, 105, 108, 90, 128);
+
+
     }
 }
