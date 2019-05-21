@@ -38,7 +38,6 @@ public class Main extends Applet {
 
 
     public static void test(Graphics g){
-        // put testing code and calls here
-
+        project.Sprites.NPC1.NPC1(g,Expo.random(100,400));
     }
 }
