@@ -13,28 +13,19 @@ public class Draw extends Applet {
             Expo.setFont(g,"Default",1,100-i);
             Expo.drawString(g,"START",100+i*5,200+i*7);
         }
-
-
-
     }
+
     public static void begin(Graphics g){
         road(g);
-        moveTest(g);
-    }
-    public static void moveTest(Graphics g){
-        int x = 0;
-        while (true){
-            player(g,x,200);
-            Expo.delay(1);
-            x ++;
-        }
-    }
-    public static void player(Graphics g, int x, int y){
-        Expo.drawPoint(g,x,y);
+        LRbtn(g);
     }
 
-
-
+    public static void LRbtn(Graphics g){
+        Expo.setFont(g,"Default",1,100);
+        Expo.setColor(g,Colors.startBlue);
+        Expo.drawString(g,"<=",480,300);
+        Expo.drawString(g,"=>",620,300);
+    }
 
 
     public static void road(Graphics g){
