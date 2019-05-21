@@ -7,8 +7,8 @@ import java.awt.*;
 public class Main extends Applet {
     public static boolean start = false;
     private Rectangle startBtn = new Rectangle(100,100,340,600);
-    private Rectangle Lbtn = new Rectangle(100,100,340,600);
-    private Rectangle Rbtn = new Rectangle(100,100,340,600);
+    private Rectangle Lbtn = new Rectangle(480,220,120,80);
+    private Rectangle Rbtn = new Rectangle(530,220,120,80);
 
     public void paint(Graphics g){
         test(g);
@@ -31,7 +31,9 @@ public class Main extends Applet {
             start = true;
             repaint();
         }
-        if (Lbtn.inside(x,y))
+        if (Lbtn.inside(x,y)){
+            System.out.println("inside lbtn");
+        }
         System.out.println(x+" "+y);
         return true;
     }
