@@ -34,6 +34,12 @@ public class Main extends Applet {
 
     public static void npcLocomotion(Graphics g){
         project.Sprites.NPC1 npc1 = new project.Sprites.NPC1(g);
+        int v = 70;
+        int y = 100;
+        v++;
+        npc1.make(g,v,y);
+
+        System.out.println(v);
     }
 
 
