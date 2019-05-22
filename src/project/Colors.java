@@ -10,4 +10,6 @@ public class Colors {
     static final Color lineYellow = new Color(218, 190, 93);
     static final Color startGreen = new Color(13, 255, 0);
     static final Color startBlue = new Color(112, 113, 255);
+    static final Color red = new Color(255, 6, 0);
+    static final Color endGreen = new Color(150, 255, 0);
 }

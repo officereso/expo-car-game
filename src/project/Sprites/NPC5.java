@@ -6,7 +6,7 @@ import java.applet.Applet;
 import java.awt.*;
 
 public class NPC5 extends Applet {
-    public static void NPC5(Graphics g) {
+    public static void make(Graphics g) {
         Expo.setColor(g,colorsTemp.NPC5Body);
         Expo.fillRectangle(g, 100, 100, 135, 160);
         Expo.setColor(g,colorsTemp.Tires);

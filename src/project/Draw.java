@@ -21,6 +21,13 @@ public class Draw extends Applet {
         //project.Sprites.NPC1.NPC1(g,Expo.random(110,390));
     }
 
+    public static void end(Graphics g){
+        Expo.setBackground(g,Colors.red);
+        Expo.setColor(g,Colors.endGreen);
+        Expo.drawString(g,"YOU DIED",100,100);
+    }
+
+
     public static void LRbtn(Graphics g){
         Expo.setFont(g,"Default",1,100);
         Expo.setColor(g,Colors.startBlue);
