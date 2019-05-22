@@ -1,3 +1,5 @@
+// This module was created by Quentin Snow
+
 package project;
 
 import java.applet.Applet;
@@ -11,10 +13,22 @@ public class Draw extends Applet {
             Expo.setFont(g,"Default",1,100-i);
             Expo.drawString(g,"START",100+i*5,200+i*7);
         }
-
-
-
     }
+
+    public static void begin(Graphics g){
+        road(g);
+        LRbtn(g);
+        //project.Sprites.NPC1.NPC1(g,Expo.random(110,390));
+    }
+
+    public static void LRbtn(Graphics g){
+        Expo.setFont(g,"Default",1,100);
+        Expo.setColor(g,Colors.startBlue);
+        Expo.drawString(g,"<=",480,300);
+        Expo.drawString(g,"=>",620,300);
+    }
+
+
     public static void road(Graphics g){
         Expo.fillRoundedRectangle(g,100,100,410,500,6);
         Expo.setColor(g,Colors.roadGrey);
