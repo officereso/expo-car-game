@@ -16,6 +16,7 @@ public class Main extends Applet {
         if (start){
             Draw.begin(g);
             playerLocomotion(g);
+            npcLocomotion(g);
         }
         else{
             Draw.startScreen(g);
@@ -29,6 +30,10 @@ public class Main extends Applet {
             Draw.end(g);
             Px = 10000;
         }
+    }
+
+    public static void npcLocomotion(Graphics g){
+        project.Sprites.NPC1 npc1 = new project.Sprites.NPC1(g);
     }
 
 
