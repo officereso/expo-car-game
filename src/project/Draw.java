@@ -18,7 +18,7 @@ public class Draw extends Applet {
     public static void begin(Graphics g){
         road(g);
         LRbtn(g);
-        //project.Sprites.NPC1.NPC1(g,Expo.random(110,390));
+        //project.Sprites.NPC.NPC(g,Expo.random(110,390));
     }
 
     public static void end(Graphics g){

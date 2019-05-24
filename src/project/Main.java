@@ -1,5 +1,7 @@
 package project;
 
+import project.Sprites.NPC;
+
 import java.applet.Applet;
 import java.awt.*;
 
@@ -10,6 +12,8 @@ public class Main extends Applet {
     private Rectangle lBtn = new Rectangle(480,220,120,80);
     private Rectangle rBtn = new Rectangle(630,220,120,80);
     private static int Px = 150;
+    private static boolean btnException = true;
+    private static boolean spwNpc1, spwNpc2 = true;
 
     public void paint(Graphics g){
         Expo.drawHeading(g, "Quentin Snow and Alekkai", "Final Project");
@@ -17,6 +21,7 @@ public class Main extends Applet {
             Draw.begin(g);
             playerLocomotion(g);
             npcLocomotion(g);
+
         }
         else{
             Draw.startScreen(g);
@@ -33,30 +38,31 @@ public class Main extends Applet {
     }
 
     public static void npcLocomotion(Graphics g){
-        project.Sprites.NPC1 npc1 = new project.Sprites.NPC1(g);
-        int v = 70;
-        int y = 100;
-        v++;
-        npc1.make(g,v,y);
-
-        System.out.println(v);
+        if (spwNpc1){
+            NPC npc1 = new NPC(g);
+            spwNpc1 = false;
+        }
+        if (spwNpc2){
+            NPC npc2 = new NPC(g);
+            spwNpc2 = false;
+        }
     }
 
 
     public boolean mouseDown(Event e, int x, int y){
+        btnException = true;
         if (startBtn.inside(x,y)){
             start = true;
-            repaint();
         }
         if (lBtn.inside(x,y)){
             Px-=10;
-            repaint();
         }
         if (rBtn.inside(x,y)){
             Px+=10;
-            repaint();
         }
 
+        btnException = false;
+        repaint();
         System.out.println(x+" "+y);
         return true;
     }

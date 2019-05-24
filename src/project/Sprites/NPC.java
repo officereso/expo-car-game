@@ -5,12 +5,9 @@ import project.Expo;
 import java.applet.Applet;
 import java.awt.*;
 
-public class NPC1 extends Applet {
-    public NPC1(Graphics g) {
-
-    }
-    public static void make(Graphics g, int x, int y){
-        // int x = Expo.random(100,400);
+public class NPC extends Thread {
+    public NPC(Graphics g) {
+        int x = Expo.random(100,400);
         Expo.setColor(g,colorsTemp.NPC1Body);
         Expo.fillRectangle(g, x, 110, x+35, 170);
         Expo.setColor(g,colorsTemp.Tires);
@@ -18,6 +15,17 @@ public class NPC1 extends Applet {
         Expo.fillRectangle(g, x+5, 145, x-5, 165);
         Expo.fillRectangle(g, x+30, 118, x+40, 138);
         Expo.fillRectangle(g, x+30, 145, x+40, 165);
+    }
+    public static void make(Graphics g){
+            int x = Expo.random(100,400);
+            Expo.setColor(g,colorsTemp.NPC1Body);
+            Expo.fillRectangle(g, x, 110, x+35, 170);
+            Expo.setColor(g,colorsTemp.Tires);
+            Expo.fillRectangle(g, x+5, 118, x-5, 138);
+            Expo.fillRectangle(g, x+5, 145, x-5, 165);
+            Expo.fillRectangle(g, x+30, 118, x+40, 138);
+            Expo.fillRectangle(g, x+30, 145, x+40, 165);
+
     }
 }
 //        Expo.setColor(g,colorsTemp.NPC1Body);
