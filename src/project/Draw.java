@@ -1,5 +1,3 @@
-// This module was created by Quentin Snow
-
 package project;
 
 import java.applet.Applet;

@@ -12,7 +12,6 @@ public class Main extends Applet {
     private Rectangle lBtn = new Rectangle(480,220,120,80);
     private Rectangle rBtn = new Rectangle(630,220,120,80);
     private static int Px = 150;
-    private static boolean btnException = true;
     private static boolean spwNpc1, spwNpc2 = true;
 
     public void paint(Graphics g){
@@ -50,7 +49,6 @@ public class Main extends Applet {
 
 
     public boolean mouseDown(Event e, int x, int y){
-        btnException = true;
         if (startBtn.inside(x,y)){
             start = true;
         }
@@ -60,8 +58,6 @@ public class Main extends Applet {
         if (rBtn.inside(x,y)){
             Px+=10;
         }
-
-        btnException = false;
         repaint();
         System.out.println(x+" "+y);
         return true;

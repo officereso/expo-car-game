@@ -5,8 +5,7 @@ package project;// THE EXPO CLASS FOR INTRO/CP COMPUTER SCIENCE
 
 import javax.swing.*;
 import java.awt.*;
-import java.util.*;
-import java.applet.Applet;
+import java.util.Scanner;
 
 /**
  *
@@ -307,7 +306,7 @@ public class Expo
             case  8 : g.setColor(gray);  currentColor = gray;  break;
             case  9 : g.setColor(pink);  currentColor = pink;  break;
             default : g.setColor(white);
-        };
+        }
     }
 
 
@@ -647,8 +646,8 @@ public class Expo
      **/
     public static void drawRegularPolygon(Graphics g, int centerX, int centerY, int radius, int sides)
     {
-        int xCoord[] = new int[sides];
-        int yCoord[] = new int[sides];
+        int[] xCoord = new int[sides];
+        int[] yCoord = new int[sides];
 
         double rotate;
         if (sides % 2 == 1)
@@ -682,8 +681,8 @@ public class Expo
         int p = points;
         points *= 2;
 
-        int xCoord[] = new int[points];
-        int yCoord[] = new int[points];
+        int[] xCoord = new int[points];
+        int[] yCoord = new int[points];
 
         int currentRadius;
 
@@ -839,8 +838,8 @@ public class Expo
      **/
     public static void fillRegularPolygon(Graphics g, int centerX, int centerY, int radius, int sides)
     {
-        int xCoord[] = new int[sides];
-        int yCoord[] = new int[sides];
+        int[] xCoord = new int[sides];
+        int[] yCoord = new int[sides];
 
         double rotate;
         if (sides % 2 == 1)
@@ -902,8 +901,8 @@ public class Expo
         int p = points;
         points *= 2;
 
-        int xCoord[] = new int[points];
-        int yCoord[] = new int[points];
+        int[] xCoord = new int[points];
+        int[] yCoord = new int[points];
 
         int currentRadius;
 
