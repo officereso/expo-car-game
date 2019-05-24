@@ -12,7 +12,8 @@ public class Main extends Applet {
     private Rectangle lBtn = new Rectangle(480,220,120,80);
     private Rectangle rBtn = new Rectangle(630,220,120,80);
     private static int Px = 150;
-    private static boolean spwNpc1, spwNpc2 = true;
+    private static NPC npc1 = new NPC();
+
 
     public void paint(Graphics g){
         Expo.drawHeading(g, "Quentin Snow and Alekkai", "Final Project");
@@ -36,15 +37,8 @@ public class Main extends Applet {
         }
     }
 
-    public static void npcLocomotion(Graphics g){
-        if (spwNpc1){
-            NPC npc1 = new NPC(g);
-            spwNpc1 = false;
-        }
-        if (spwNpc2){
-            NPC npc2 = new NPC(g);
-            spwNpc2 = false;
-        }
+    public static void npcLocomotion(Graphics g) {
+        NPC.make(g);
     }
 
 
