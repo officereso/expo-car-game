@@ -73,7 +73,6 @@ public class Main extends Applet {
             Px+=10;
         }
         score++;
-        System.out.println(score);
         repaint();
         return true;
     }
