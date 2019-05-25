@@ -9,12 +9,29 @@ import java.awt.*;
 public class Main extends Applet {
     private static boolean start = false;
     private Rectangle startBtn = new Rectangle(100,100,340,600);
-    public static int score = 0;
+    private static int score = 0;
     private Rectangle lBtn = new Rectangle(480, 240, 150, 80);
     private static int Px = 150;
     private Rectangle rBtn = new Rectangle(660, 240, 150, 80);
 
-    public static void npcLocomotion(Graphics g) {
+    public void paint(Graphics g) {
+        Expo.drawHeading(g, "Quentin Snow and Alekkai", "Final Project");
+        if (start && !NPC1.ended && !NPC2.ended && !NPC3.ended && !NPC4.ended && !NPC5.ended && !NPC6.ended) {
+            Draw.begin(g, score);
+            playerLocomotion(g);
+            npcLocomotion(g);
+
+        }
+        if (!start) {
+            Draw.startScreen(g);
+        }
+
+        if (NPC1.ended || NPC2.ended || NPC3.ended || NPC4.ended || NPC5.ended || NPC6.ended) {
+            Draw.end(g);
+        }
+    }
+
+    private static void npcLocomotion(Graphics g) {
         if (score > 3) {
             new NPC1(g, Px);
         }
@@ -36,7 +53,7 @@ public class Main extends Applet {
     }
 
 
-    public static void playerLocomotion(Graphics g) {
+    private static void playerLocomotion(Graphics g) {
         project.Sprites.player.make(g, Px, 427);
         if (Px <= 107 || Px >= 375) {
             Draw.end(g);
@@ -44,22 +61,6 @@ public class Main extends Applet {
         }
     }
 
-    public void paint(Graphics g) {
-        Expo.drawHeading(g, "Quentin Snow and Alekkai", "Final Project");
-        if (start && !NPC1.ended && !NPC2.ended && !NPC3.ended && !NPC4.ended && !NPC5.ended && !NPC6.ended) {
-            Draw.begin(g, score);
-            playerLocomotion(g);
-            npcLocomotion(g);
-
-        }
-        if (!start) {
-            Draw.startScreen(g);
-        }
-
-        if (NPC1.ended || NPC2.ended || NPC3.ended || NPC4.ended || NPC5.ended || NPC6.ended) {
-            Draw.end(g);
-        }
-    }
 
     public boolean mouseDown(Event e, int x, int y){
         if (startBtn.inside(x,y)){
