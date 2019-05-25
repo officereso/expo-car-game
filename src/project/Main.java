@@ -34,6 +34,9 @@ public class Main extends Applet {
         if (score > 80) {
             new NPC6(g, Px);
         }
+        if (score > 140) {
+            new NPC7(g, Px);  // The "grandma NPC", very "slow", good luck
+        }
     }
 
     private static void playerLocomotion(Graphics g) {

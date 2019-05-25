@@ -17,9 +17,9 @@ public class NPC2 extends Applet {
     }
 
     public static void make(Graphics g, int Px) {
-        if (!(y >= 240 && y <= 350 && x >= Px - 40 && x <= Px + 43)) { // Collision detection
+        if (!(y >= 250 && y <= 350 && x >= Px - 40 && x <= Px + 43)) { // Collision detection
             y += speed; // Moves NPC down according to its speed
-            Expo.setColor(g, SpriteColors.NPC1Body);
+            Expo.setColor(g, SpriteColors.NPC2Body);
             Expo.fillRectangle(g, x, y + 110, x + 35, y + 170);
             Expo.setColor(g, SpriteColors.Tires);
             Expo.fillRectangle(g, x + 5, y + 118, x - 5, y + 138);
