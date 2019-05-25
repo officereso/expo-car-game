@@ -13,24 +13,27 @@ public class Draw extends Applet {
         }
     }
 
-    public static void begin(Graphics g){
+    public static void begin(Graphics g, int score) {
         road(g);
-        LRbtn(g);
-        //project.Sprites.NPC.NPC(g,Expo.random(110,390));
+        btns(g);
+        Expo.setFont(g, "Default", 1, 15);
+        Expo.drawString(g, "Your score is " + score, 600, 100);
     }
 
     public static void end(Graphics g){
         Expo.setBackground(g,Colors.red);
         Expo.setColor(g,Colors.endGreen);
+        Expo.setFont(g, "Default", 1, 100);
         Expo.drawString(g,"YOU DIED",100,100);
     }
 
 
-    public static void LRbtn(Graphics g){
+    public static void btns(Graphics g) {
         Expo.setFont(g,"Default",1,100);
         Expo.setColor(g,Colors.startBlue);
         Expo.drawString(g,"<=",480,300);
-        Expo.drawString(g,"=>",620,300);
+        Expo.fillCircle(g, 650, 271, 20);
+        Expo.drawString(g, "=>", 660, 300);
     }
 
 
