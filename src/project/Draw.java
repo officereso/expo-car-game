@@ -5,8 +5,7 @@ import java.awt.*;
 
 public class Draw extends Applet {
     public static void startScreen(Graphics g){
-
-        for(int i=0;i<=20;i++){
+        for (int i = 0; i <= 20; i++) {  // Draws the word START in a fall to the bottom left style.
             Expo.setRandomColor(g);
             Expo.setFont(g, "Arial", 1, 100 - i);
             Expo.drawString(g,"START",100+i*5,200+i*7);
@@ -17,10 +16,10 @@ public class Draw extends Applet {
         road(g);
         btns(g);
         Expo.setFont(g, "Arial", 1, 15);
-        Expo.drawString(g, "Your score is " + score, 600, 100);
+        Expo.drawString(g, "Your score is " + score, 600, 100);  // Draws score
     }
 
-    public static void end(Graphics g){
+    public static void end(Graphics g) {  // Draws screen that is shown on collision with another car or road shoulder
         Expo.setBackground(g,Colors.red);
         Expo.setColor(g,Colors.endGreen);
         Expo.setFont(g, "Arial", 1, 100);
@@ -28,7 +27,7 @@ public class Draw extends Applet {
     }
 
 
-    public static void btns(Graphics g) {
+    public static void btns(Graphics g) {  // Draws buttons responsible the user presses for player locomotion
         Expo.setFont(g, "Arial", 1, 100);
         Expo.setColor(g,Colors.startBlue);
         Expo.drawString(g,"<=",480,300);
