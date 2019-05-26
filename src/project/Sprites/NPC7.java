@@ -1,6 +1,5 @@
 package project.Sprites;
 
-import project.Draw;
 import project.Expo;
 
 import java.applet.Applet;
@@ -17,7 +16,7 @@ public class NPC7 extends Applet {
     }
 
     public static void make(Graphics g, int Px) {
-        if (!(y >= 240 && y <= 350 && x >= Px - 40 && x <= Px + 43)) { // Collision detection
+        if (!(y >= 250 && y <= 350 && x >= Px - 40 && x <= Px + 43)) { // Collision detection
             y += speed; // Moves NPC down according to its speed
             Expo.setColor(g, SpriteColors.NPC7Body);
             Expo.fillRectangle(g, x, y + 110, x + 35, y + 170);
@@ -27,7 +26,6 @@ public class NPC7 extends Applet {
             Expo.fillRectangle(g, x + 30, y + 118, x + 40, y + 138);
             Expo.fillRectangle(g, x + 30, y + 145, x + 40, y + 165);
         } else {
-            Draw.end(g);  // Draws end screen
             collision = true;  // Used by Main.java to detect if game is collision
         }
         if (y > 350) {  // Used to "respawn" NPC once its y reaches a certain point. Does this by resetting all variables.
