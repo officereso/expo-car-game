@@ -14,8 +14,8 @@ public class Main extends Applet {
     private Rectangle startBtn = new Rectangle(100, 100, 340, 600);  // Rectangle that the user presses to start the game
     private Rectangle lBtn = new Rectangle(480, 240, 150, 80);  // Rectangle that the player presses to move player to the left
     private Rectangle rBtn = new Rectangle(660, 240, 150, 80);  // Rectangle that the player presses to move player to the right
-    private Rectangle lpBtn = new Rectangle(480, 340, 150, 80);  // Rectangle that the player presses to move player to the power left
-    private Rectangle rpBtn = new Rectangle(660, 340, 150, 80);  // Rectangle that the player presses to move player to the power right
+    private Rectangle lpBtn = new Rectangle(480, 640, 150, 80);  // Rectangle that the player presses to move player to the power left
+    private Rectangle rpBtn = new Rectangle(660, 640, 150, 80);  // Rectangle that the player presses to move player to the power right
     private boolean alive = true;  // Used to stop score from increasing
     private boolean powerUsed = true;  // Sets default value for power availability
 

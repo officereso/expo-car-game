@@ -7,7 +7,7 @@ import java.awt.*;
 
 public class NPC2 extends Applet {
     public static boolean collision = false;
-    private static int x = Expo.random(100, 400);  // Where NPC starts on road
+    private static int x = Expo.random(100, 350);  // Where NPC starts on road
     private static int y = -15;  // Default starting position for NPC. Negative because NPC is draw from bottom left to top right.
     private static int speed = Expo.random(10, 40); // Value to move NPC down
 

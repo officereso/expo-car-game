@@ -43,10 +43,10 @@ public class Draw extends Applet {
     public static void pBtn(Graphics g) {
         Expo.setFont(g, "Arial", 1, 100);
         Expo.setColor(g, Colors.pBtn);
-        Expo.drawString(g, "<=", 480, 400);
-        Expo.drawString(g, "=>", 660, 400);
+        Expo.drawString(g, "<=", 480, 700);
+        Expo.drawString(g, "=>", 660, 700);
         Expo.setFont(g, "Arial", 1, 20);
-        Expo.drawString(g, "Power move! Click the buttons bellow to move five times as far!", 450, 335);
+        Expo.drawString(g, "Power move! Click the buttons bellow to move five times as far!", 450, 635);
     }
 
 
