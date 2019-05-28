@@ -16,7 +16,7 @@ public class Main extends Applet {
     private Rectangle rBtn = new Rectangle(660, 240, 150, 80);  // Rectangle that the player presses to move player to the right
     private Rectangle lpBtn = new Rectangle(480, 640, 150, 80);  // Rectangle that the player presses to move player to the power left
     private Rectangle rpBtn = new Rectangle(660, 640, 150, 80);  // Rectangle that the player presses to move player to the power right
-    private boolean alive = true;  // Used to stop score from increasing
+    private boolean alive = false;  // Used to stop score from increasing
     private boolean powerUsed = true;  // Sets default value for power availability
 
     private static void npcLocomotion(Graphics g) {  // Logic for spawning NPC objects
@@ -45,7 +45,7 @@ public class Main extends Applet {
 
     private static void playerLocomotion(Graphics g) {
         Player.make(g, Px, 427);  // Draw the player according to its Px
-        if (Px <= 107 || Px >= 375) { // Logic to detect if player has it the shoulder of road
+        if (Px <= 107 || Px >= 365) { // Logic to detect if player has it the shoulder of road
             playerHitShoulder = true;
         }
     }
@@ -55,6 +55,7 @@ public class Main extends Applet {
         if (start && !NPC1.collision && !NPC2.collision && !NPC3.collision && !NPC4.collision && !NPC5.collision && !NPC6.collision && !NPC7.collision && !playerHitShoulder) {  // Start and keep game running if 1. startBtn has been pressed. 2. No NPCs have detected a collision and player hasn't hit shoulder.
             if (score % 50 == 0) {
                 powerUsed = false;
+                alive = true;
             }
             Draw.begin(g, score, powerUsed);
             playerLocomotion(g);
